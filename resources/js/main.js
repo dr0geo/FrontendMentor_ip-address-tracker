@@ -9,14 +9,14 @@ const button = document.getElementsByTagName('button')[0];
 
 // Create map:
 
-const mymap = L.map('map').setView([0, 0], 13);
+const mymap = L.map('map').setView([53, -5], 9);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoiZHIwZ2VvIiwiYSI6ImNrZ2wzdW5hdTBjMzkydG1zOWZ3c2hsN2oifQ.v4I6_MpfStGKPaUWebwWaA'
+    accessToken: 'pk.eyJ1IjoiZHIwZ2VvIiwiYSI6ImNrZ2w0MXQ5bTJoejMyeXMxNmc1dnhubzcifQ.OA5cDhfpEW6aaz9txfiScw'
 }).addTo(mymap);
 
 // Create GET request to retrieve information:
@@ -42,7 +42,7 @@ const getIpResults = () => {
         isp.innerHTML = response.isp;
         // Relative to map:
         const coordinates = [response.location.lat, response.location.lng];
-        mymap.panTo(coordinates);
+        mymap.flyTo(coordinates);
         L.marker(coordinates).addTo(mymap);
       }
     }
@@ -52,5 +52,10 @@ const getIpResults = () => {
 }
 
 button.addEventListener('click', getIpResults);
+window.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    getIpResults();
+  }
+});
 
 getIpResults();

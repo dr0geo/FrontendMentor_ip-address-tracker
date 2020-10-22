@@ -87,14 +87,14 @@ h2 {
   font-size: 0.8em;
   font-weight: 500;
   letter-spacing: 0.1em;
-  padding-left: 20px;
+  padding: 0px 20px;
   text-transform: uppercase;
 }
 
 p {
   color: hsl(0, 0%, 17%);
-  font-size: 1.4em;
-  padding-left: 20px;
+  font-size: 1.3em;
+  padding: 0px 20px;
 }
 
 #map {
