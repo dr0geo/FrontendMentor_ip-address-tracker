@@ -14,36 +14,45 @@
   </head>
 
   <body>
-    
+
     <header>
       <h1>IP Address Tracker</h1>
-      <input type="text" placeholder="Search for any IP address or domain" />
+      <div id="submit">
+        <input type="text" placeholder="Search for any IP address or domain" />
+        <button type="submit"></button>
+      </div> 
     </header>
 
     <main>
-      <section>
-        <h2>IP Address</h2>
-        <p></p>
+      <section id="results">
+        <div>
+          <h2>IP Address</h2>
+          <p></p>
+        </div>
+ 
+        <div>
+          <h2>Location</h2>
+          <p></p>
+        </div>
+
+        <div>
+          <h2>Timezone</h2>
+          <p>UTC</p>
+        </div>
+
+        <div>
+          <h2>ISP</h2>
+          <p></p>
+        </div>
       </section>
 
-      <section>
-        <h2>Location</h2>
-        <p></p>
-      </section>
-
-      <section>
-        <h2>Timezone</h2>
-        <p>UTC</p>
-      </section>
-
-      <section>
-        <h2>ISP</h2>
-        <p></p>
+      <section id="map">
+        
       </section>
     </main>
 
     <footer>
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/dr0geo" target="_blank">dr0geo</a>.
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/dr0geo" target="_blank">dr0geo</a>.</p>
     </footer>
 
   </body>
