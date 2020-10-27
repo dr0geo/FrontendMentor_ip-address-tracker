@@ -4,7 +4,6 @@ const ipAddress = document.getElementById('ip-result');
 const locationResult = document.getElementById('location-result');
 const timezone = document.getElementById('timezone-result');
 const isp = document.getElementById('isp-result');
-
 const button = document.getElementsByTagName('button')[0];
 
 // Create map:
@@ -21,8 +20,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 // Fetch information:
 
-const getIpResults = async () => {
-  inputValue = document.getElementsByTagName('input')[0].value;
+const getIpResults = () => {
+  const inputValue = document.getElementsByTagName('input')[0].value;
   let url;
     
   if (inputValue === '') {
