@@ -16,7 +16,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoiZHIwZ2VvIiwiYSI6ImNrZ2wzdW5hdTBjMzkydG1zOWZ3c2hsN2oifQ.v4I6_MpfStGKPaUWebwWaA'
+    accessToken: 'pk.eyJ1IjoiZHIwZ2VvIiwiYSI6ImNrZ3NpdzlrdTBvMDcyeW1mM3JhdWg0YTYifQ.fxz89-sBEjM2DNbzS2wZCg'
 }).addTo(myMap);
 
 // Create GET request to retrieve information:
@@ -27,9 +27,9 @@ const getIpResults = () => {
     const xhr = new XMLHttpRequest();
 
     if (inputValue === '') {
-      xhr.open('GET', 'https://geo.ipify.org/api/v1?apiKey=at_twq88aaXycBh9fu7OKwKSXqt3Cq6R');
+      xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v1?apiKey=at_twq88aaXycBh9fu7OKwKSXqt3Cq6R');
     } else {
-      xhr.open('GET', `https://geo.ipify.org/api/v1?apiKey=at_twq88aaXycBh9fu7OKwKSXqt3Cq6R&ipAddress=${inputValue}`);
+      xhr.open('GET', `https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v1?apiKey=at_twq88aaXycBh9fu7OKwKSXqt3Cq6R&ipAddress=${inputValue}`);
     }
     
     xhr.onreadystatechange = function() {
